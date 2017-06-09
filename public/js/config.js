@@ -5,9 +5,13 @@ requirejs.config({
         bootstrap : 'bootstrap/js/bootstrap.min',
         cookie : 'jquery-cookie/jquery.cookie',
         template : 'artTemplate/template-web',
+        nprogress : 'nprogress/nprogress',
         common : '../js/common',
+        index : '../js/index',
         login : '../js/login',
+        util : '../js/util',
         tealist : '../js/teacher-list'
+
     },
     shim : {// 兼容非标准模块
         bootstrap : {

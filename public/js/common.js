@@ -1,4 +1,4 @@
-define(['jquery','template','cookie'],function($,template){
+define(['jquery','template','nprogress','cookie'],function($,template,nprogress){
     // 控制左侧菜单的展开和折叠
     $('.navs ul').prev('a').on('click', function () {
         $(this).next().slideToggle();
@@ -23,6 +23,9 @@ define(['jquery','template','cookie'],function($,template){
     }
     // 获取登录用户的cookie信息
     var loginInfo = $.cookie('loginInfo') && JSON.parse($.cookie('loginInfo'));
+   
+
+    // 渲染页面
     if(loginInfo){
        var loginTpl = '<div class="avatar img-circle"><img src="{{tc_avatar}}"></div><h4>{{tc_name}}</h4>';
         var html = template.render(loginTpl,loginInfo);
@@ -36,5 +39,20 @@ define(['jquery','template','cookie'],function($,template){
         // $('.aside .profile').find('h4').text(loginInfo.tc_name);
     }
 
+    //加载遮罩效果
+    $(document).ajaxStart(function(){
+        //显示遮罩层
+        $('.overlay').show();
+
+    });
+    $(document).ajaxStop(function(){
+        //隐藏遮罩层
+        $('.overlay').hide();
+      
+    });
+
+    //进度控制
+    nprogress.start();
+    nprogress.done();
     
 });
