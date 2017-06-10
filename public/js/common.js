@@ -14,6 +14,7 @@ define(['jquery','template','nprogress','cookie'],function($,template,nprogress)
             }
         });
     });
+    
     // 获取请求路径
     var pathname = location.pathname;
     // 判断用户是否已经登录要通过PHPSESSID判断
