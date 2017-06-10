@@ -3,7 +3,7 @@ define(['jquery'],function($){
 		setMenu : function(pathname) {
 			$('.aside .navs a').removeClass('active');
             $('.aside .navs a[href="'+pathname+'"]').addClass('active');
-		}
+		},
 		qs : function(attr,param) {
 			// 例如  ?abc=123&flag=456
 			var p = param.substring(1);
