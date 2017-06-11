@@ -28,7 +28,7 @@ define(['jquery','template','nprogress','cookie'],function($,template,nprogress)
 
     // 渲染页面
     if(loginInfo){
-       var loginTpl = '<div class="avatar img-circle"><img src="{{tc_avatar}}"></div><h4>{{tc_name}}</h4>';
+        var loginTpl = '<div class="avatar img-circle"><img src="{{tc_avatar}}"></div><h4>{{tc_name}}</h4>';
         var html = template.render(loginTpl,loginInfo);
         $('#loginInfoTpl').html(html);
 
