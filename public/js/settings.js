@@ -1,11 +1,10 @@
-<<<<<<< HEAD
+
 define(['jquery','template','datepicker','language'],function($,template){
-=======
+
 define(['jquery','template','ckeditor','util','datepicker','language','uploadify','region','validate','form'],function($,template,CKEDITOR,util){
 	//左侧导航菜单选中
 	util.setMenu('/index/index');
 
->>>>>>> settings
 	//查询个人信息
 	$.ajax({
 		type : 'get',
@@ -14,10 +13,10 @@ define(['jquery','template','ckeditor','util','datepicker','language','uploadify
 		success : function(data) {
 			var html = template('settingsTpl',data.result);
 			$('#settingsInfo').html(html);
-<<<<<<< HEAD
+
 		}
 	});
-=======
+
 
 				//处理头像上传
 			$('#upfile').uploadify({
@@ -75,5 +74,5 @@ define(['jquery','template','ckeditor','util','datepicker','language','uploadify
 		}
 	});
 
->>>>>>> settings
+
 });
