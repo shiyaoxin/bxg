@@ -10,12 +10,16 @@ requirejs.config({
         form : 'jquery-form/jquery.form',
         datepicker : 'bootstrap-datepicker/js/bootstrap-datepicker.min',
         language : 'bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min',
+        uploadify : 'uploadify/jquery.uploadify.min',
+        region : 'jquery-region/jquery.region',
+        ckeditor : 'ckeditor/ckeditor',
         common : '../js/common',
         index : '../js/index',
         login : '../js/login',
         util : '../js/util',
         tealist : '../js/teacher-list',
         teaadd : '../js/teacher-add',
+        settings : '../js/settings'
 
     },
     shim : {// 兼容非标准模块
@@ -27,6 +31,12 @@ requirejs.config({
         },
         language : {
             deps : ['jquery','datepicker']
+        },
+        uploadify : {
+            deps : ['jquery']
+        },
+        ckeditor : {
+            exports : 'CKEDITOR'
         }
     }
 });
