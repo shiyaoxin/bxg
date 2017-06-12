@@ -18,24 +18,17 @@
             <!-- 讲师资料 -->
             <div class="body teacher-profile">
                 <div class="settings" id="settingsInfo">
-      
+                    <!-- 挖个坑 -->
                 </div>
             </div>
         </div>
     </div>
     <script type="text/template" id="settingsTpl">
-
-        <form action="" class="form-horizontal">
-            <div class="form-group">
-                <label for="" class="col-xs-3 control-label">姓名</label>
-                <div class="col-xs-5">
-
         <form id="settingsForm" class="form-horizontal">
             <div class="form-group">
                 <label for="" class="col-xs-3 control-label">姓名</label>
                 <div class="col-xs-5">
                     <input type="hidden" name="tc_id" value="{{tc_id}}">
-
                     <p class="form-control-static">{{tc_name}}</p>
                 </div>
             </div>
@@ -46,7 +39,7 @@
                         <img src="{{tc_avatar}}">
                     {{else}}
                         <img src="/public/images/default.png">
-                    {{/if}}                 
+                    {{/if}}
                     <input type="file" id="upfile">
                     <div class="cover">
                         <i class="fa fa-upload"></i>                  
@@ -63,51 +56,30 @@
                 <label for="" class="col-xs-3 control-label">性别</label>
                 <div class="col-xs-3">
                     <label class="radio-inline">
-                        <input name="tc_gender" value="1" type="radio" {{if tc_gender == 1}} checked {{/if}}> 男
+                        <input name="tc_gender" value="1" type="radio" {{if tc_gender == 1}}checked{{/if}}> 男
                     </label>
                     <label class="radio-inline">
-                        <input name="tc_gender" value="0" type="radio" {{if tc_gender == 0}} checked {{/if}}> 女
+                        <input name="tc_gender" value="0" type="radio" {{if tc_gender == 0}}checked{{/if}}> 女
                     </label>
                 </div>
             </div>
             <div class="form-group">
                 <label for="" class="col-xs-3 control-label">出生日期</label>
                 <div class="col-xs-5">
-                    <input name="tc_birthday" data-provide="datepicker" data-date-format="yyyy-mm-dd" data-date-language="zh-CN" value="{{tc_birthday}}" type="text" class="form-control input-sm">
+                    <input name="tc_birthday" data-provide='datepicker' data-date-format='yyyy-mm-dd' data-date-language='zh-CN' value="{{tc_birthday}}" type="text" class="form-control input-sm">
                 </div>
             </div>
             <div class="form-group">
                 <label for="" class="col-xs-3 control-label">籍贯</label>
-
-                <div class="col-xs-5">
-                    <select name="" class="form-control input-sm">
-                        <option value="">河北省</option>
-                        <option value="">山东省</option>
-                        <option value="">北京市</option>
-                    </select>
-                    <select name="" class="form-control input-sm">
-                        <option value="">河北省</option>
-                        <option value="">山东省</option>
-                        <option value="">北京市</option>
-                    </select>
-                    <select name="" class="form-control input-sm">
-                        <option value="">河北省</option>
-                        <option value="">山东省</option>
-                        <option value="">北京市</option>
-
                 <div class="col-xs-5" id="hometown">
-                    <select id="p" data-id="{{tc_province}}" name="tc_province" class="form-control input-sm">
+                    <select id="p" data-id='{{tc_province}}' name="tc_province" class="form-control input-sm">
                         <option value="0">请选择省</option>
-                       
                     </select>
-                    <select id="c" data-id="{{tc_city}}" name="tc_city" class="form-control input-sm">
+                    <select id="c" data-id='{{tc_city}}' name="tc_city" class="form-control input-sm">
                         <option value="0">请选择市</option>
-                       
                     </select>
-                    <select id="d" data-id="{{tc_district}}" name="tc_district" class="form-control input-sm">
-                        <option value="0">请选择县/区</option>
-                        
-
+                    <select id="d" data-id='{{tc_district}}' name="tc_district" class="form-control input-sm">
+                        <option value="0">请选择区/县</option>
                     </select>
                 </div>
             </div>
@@ -132,11 +104,7 @@
             <div class="form-group">
                 <label for="" class="col-xs-3 control-label">个人介绍</label>
                 <div class="col-xs-5 ckeditor">
-
-                    <textarea name="tc_introduce" rows="15" class="form-control input-sm">
-
                     <textarea id="editor" name="tc_introduce" rows="15" class="form-control input-sm">
-
                         {{tc_introduce}}
                     </textarea>
                 </div>
@@ -149,8 +117,7 @@
             </div>
         </form>
     </script>
-
-   <?php include('/view/common/script.html'); ?>
+    <?php include('/view/common/script.html'); ?>
     <script type="text/javascript">
         requirejs(['settings']);
     </script>
