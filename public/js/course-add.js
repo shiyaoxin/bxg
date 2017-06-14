@@ -1,6 +1,6 @@
 define(['jquery','util','validate','form'],function($,util){
 	util.setMenu(location.pathname);
-
+    
 	$('#courseAddForm').validate({
 		sendForm : false,
 		valid : function(){

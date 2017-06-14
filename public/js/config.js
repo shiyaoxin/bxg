@@ -13,6 +13,7 @@ requirejs.config({
         uploadify : 'uploadify/jquery.uploadify.min',
         region : 'jquery-region/jquery.region',
         ckeditor : 'ckeditor/ckeditor',
+        jcrop : 'jcrop/js/Jcrop',
         common : '../js/common',
         index : '../js/index',
         login : '../js/login',
@@ -22,7 +23,9 @@ requirejs.config({
         settings : '../js/settings',
         courselist : '../js/course-list',
         courseadd : '../js/course-add',
-        coursebasic : '../js/course-basic'
+        coursebasic : '../js/course-basic',
+        coursepicture : '../js/course-picture',
+        courselesson : '../js/course-lesson'
 
     },
     shim : {// 兼容非标准模块
@@ -40,6 +43,9 @@ requirejs.config({
         },
         ckeditor : {
             exports : 'CKEDITOR'
+        },
+        jcrop : {
+            deps : ['jquery']
         }
     }
 });
